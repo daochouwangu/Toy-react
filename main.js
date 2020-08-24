@@ -10,11 +10,13 @@ class MyComponent extends Component{
   render() {
     return <div>
             <h1>component</h1>
-            <span>{this.state.a}</span>
-            {this.children}
+            <button onClick={() => {this.setState({a: this.state.a+1,c:8})}}>add 1</button>
+            <span>{this.state.a}</span><br/>
+            <p>{this.state.b}</p>
+            <span>{this.state.c?"hasC":"No c"}</span>
           </div>
   }
 }
 render(
-<MyComponent id="myid" class="cls"><div>a</div><span>bc</span></MyComponent>, document.body
+<MyComponent id="myid" class="cls"></MyComponent>, document.body
 )
